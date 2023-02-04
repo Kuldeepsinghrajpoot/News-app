@@ -1,0 +1,42 @@
+{
+  "status": "ok",
+  "totalResults": 4,
+  "articles": [
+    {
+      "author": null,
+      "title": "Historic statue of Clark unveiled at SCG",
+      "description": "Former Australia captain Belinda Clark becomes the first female cricketer to have a statue cast of her, with a bronze sculpture unveiled at the Sydney Cricket Ground.",
+      "url": "http://www.bbc.co.uk/sport/cricket/64172962",
+      "urlToImage": "https://ichef.bbci.co.uk/live-experience/cps/624/cpsprodpb/F6A4/production/_128204136_gettyimages-1454267163.jpg",
+      "publishedAt": "2023-01-05T09:22:32.496471Z",
+      "content": "Belinda Clark was inducted into the International Cricket Council's Hall of Fame in 2011\r\nFormer Australia captain Belinda Clark has become the first female cricketer to have a statue cast of her, wi… [+1079 chars]"
+    },
+    {
+      "author": "Tim Fernandez",
+      "title": "Shane Warne portrait added to Greats of the Game collection at Bradman museum",
+      "description": "Shane Warne was set to sit for this portrait, the last in a collection of 20 depicting the world's greatest cricketers, until his sudden death in Thailand changed the plans of artist Dave Thomas.",
+      "url": "http://www.abc.net.au/news/2023-01-04/shane-warne-posthumous-portrait-for-greats-of-game-collection/101792032",
+      "urlToImage": "https://live-production.wcms.abc-cdn.net.au/94ebc09ef72599b433601362d1e5d83d?impolicy=wcms_crop_resize&cropH=941&cropW=1673&xPos=2&yPos=0&width=862&height=485",
+      "publishedAt": "2023-01-03T21:41:41Z",
+      "content": "A portrait of Shane Warne completed after his death has been unveiled as the final painting in a collection of artworks depicting the most influential cricketers of all time.\r\nKey points:\r\n<ul><li>Ar… [+4242 chars]"
+    },
+    {
+      "author": null,
+      "title": "PCB hands Umar Akmal three-year ban from all cricket | ESPNcricinfo.com",
+      "description": "Penalty after the batsman pleaded guilty to not reporting corrupt approaches | ESPNcricinfo.com",
+      "url": "http://www.espncricinfo.com/story/_/id/29103103/pcb-hands-umar-akmal-three-year-ban-all-cricket",
+      "urlToImage": "https://a4.espncdn.com/combiner/i?img=%2Fi%2Fcricket%2Fcricinfo%2F1099495_800x450.jpg",
+      "publishedAt": "2020-04-27T11:41:47Z",
+      "content": "Umar Akmal's troubled cricket career has hit its biggest roadblock yet, with the PCB handing him a ban from all representative cricket for three years after he pleaded guilty of failing to report det… [+1506 chars]"
+    },
+    {
+      "author": null,
+      "title": "What we learned from watching the 1992 World Cup final in full again | ESPNcricinfo.com",
+      "description": "Wides, lbw calls, swing - plenty of things were different in white-ball cricket back then | ESPNcricinfo.com",
+      "url": "http://www.espncricinfo.com/story/_/id/28970907/learned-watching-1992-world-cup-final-full-again",
+      "urlToImage": "https://a4.espncdn.com/combiner/i?img=%2Fi%2Fcricket%2Fcricinfo%2F1219926_1296x729.jpg",
+      "publishedAt": "2020-03-30T15:26:05Z",
+      "content": "Last week, we at ESPNcricinfo did something we have been thinking of doing for eight years now: pretend-live ball-by-ball commentary for a classic cricket match. We knew the result, yes, but we tried… [+6823 chars]"
+    }
+  ]
+}
