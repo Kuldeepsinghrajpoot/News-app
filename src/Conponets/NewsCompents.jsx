@@ -7,10 +7,11 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import PropTypes from 'prop-types'
 
 
+ 
 export default class NewsCompents extends Component {
 
   static propTypes = {
-    country: PropTypes.string.isRequired,
+    country: PropTypes.string.isRequired, 
     category: PropTypes.string.isRequired,
     pageSize: PropTypes.number.isRequired
 
@@ -56,8 +57,15 @@ export default class NewsCompents extends Component {
 
     this.setState({ page: this.state.page + 1 })
     let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=b75bbbbb112943b7a061d709e59e4364&page=${this.state.page+1}&pageSize=${this.props.pageSize}`;
-   this.setState({ loading: true })
-    let data = await fetch(url);
+    this.setState({ loading: true })
+    let data = await fetch(url,{
+      method: "GET",
+      mode: "cors",
+   
+      // body: JSON.stringify(data),
+    });
+
+    
     let newsData = await data.json();
 
     this.setState({
@@ -75,12 +83,12 @@ export default class NewsCompents extends Component {
           dataLength={this.state.articles.length}
           next={this.fetchMoreData}
           hasMore={this.state.articles.length !== this.state.totalResults}
-          loader={"!this.state.loader&&<Spinner/>"}>
+          loader={this.state.loader && <Spinner/>}>
 
           <div className="container row">
-            {this.state.articles.map((e) => {
+            {this.state.articles.map((e,key) => {
               return (
-                <div className="col-md-3 my-2" key={e.url}>
+                <div className="col-md-3 my-2" key={key}>
                   <News
                     title={e.title}
                     decription={e.description}

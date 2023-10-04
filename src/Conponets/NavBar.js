@@ -6,7 +6,7 @@ export default class NavBar extends Component {
   render() {
     return (
       <>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark position-sticky sticky-top">
           <div className="container-fluid">
             <Link className="navbar-brand" to="/">
               {/* here the prpos method is set to be define it is differet to the function componet */}
