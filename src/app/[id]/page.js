@@ -8,20 +8,30 @@ const Page = ({params}) => {
 
     const getproducts = async () => {
         try {
-            const res = await fetch(`https://newsapi.org/v2/top-headlines?country=in&category=${params.id}&apiKey=76114629f69449f59cc52bce7e239b15`);
-            const data = await res.json();
-            setproducts(data.articles);
+            const url = `https://newsapi.org/v2/top-headlines?country=in&category=${params.id}`;    
+            const apiResponse = await fetch(url
+                ,{
+                    headers: {
+                        Authorization: `Bearer ad521b4bcb3f4ab68c229acd28ca4b50`,
+                    },
+                },
+                );
+                const apiJson = await apiResponse.json();
+
+            // const res = await fetch(`&apiKey=`);
+            // const data = await res.json();
+            setproducts(apiJson.articles);
         } catch (error) {
             console.log("somethingwent wrong", error);
         }
         
     }
-    console.log(products);
+    // console.log(products);
 
     useEffect(() => {
         getproducts();
 
-    }, [])
+    }, [setproducts])
     return (
 
         <section className="text-gray-600 body-font">
@@ -31,7 +41,7 @@ const Page = ({params}) => {
                 {products.map((e, id) => {
 
                     const { author, title, description, url, urlToImage, publishedAt } = e;
-                    console.log(urlToImage);
+                    // console.log(urlToImage);
                     return (
                         <div className="-m-4" key={id}>
                             <div className="p-10 gap-6  w-full">

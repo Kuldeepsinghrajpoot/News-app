@@ -67,7 +67,7 @@ function page() {
                                 href="/technology"
                                 className="py-2 px-2 font-medium text-gray-500 rounded hover:bg-green-500 hover:text-white transition duration-300"
                             >
-                                Technology
+                                echnology
                             </Link>
 
                         </div>
