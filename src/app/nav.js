@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 function page() {
     return (
-        <div>
+        <>
             <nav className=" shadow-lg border sticky top-0 bg-white h-16 py-3 ">
                 <div className="max-w-6xl mx-auto px-4">
                     <div className="flex justify-between">
@@ -132,9 +132,9 @@ function page() {
 
             </nav>
             {/* <br /> */}
-            {/* <h1 className="text-black-500 text-2xl md:text-3xl lg:text-4xl font-bold p-4">News </h1> */}
+            <h1 className="text-black-500 text-2xl md:text-3xl lg:text-4xl font-bold p-4">News </h1>
 
-        </div>
+        </>
     );
 }
 
