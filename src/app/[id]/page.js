@@ -1,44 +1,33 @@
-'use client'
 
-import React, { useEffect, useState } from 'react';
-
-const Page = ({params}) => {
-
-    const [products, setproducts] = useState([]);
-
-    const getproducts = async () => {
-        try {
-            const url = `https://newsapi.org/v2/top-headlines?country=in&category=${params.id}`;    
-            const apiResponse = await fetch(url
-                ,{
-                    headers: {
-                        Authorization: `Bearer ad521b4bcb3f4ab68c229acd28ca4b50`,
-                    },
+const getproducts = async (id) => {
+   
+    try {
+        const url = `https://newsapi.org/v2/top-headlines?country=in&category=${id}`;    
+        const apiResponse = await fetch(url
+            ,{
+                headers: {
+                    Authorization: `Bearer ad521b4bcb3f4ab68c229acd28ca4b50`,
                 },
-                );
-                const apiJson = await apiResponse.json();
-
-            // const res = await fetch(`&apiKey=`);
-            // const data = await res.json();
-            setproducts(apiJson.articles);
-        } catch (error) {
-            console.log("somethingwent wrong", error);
-        }
-        
+            },
+            );
+            const apiJson = await apiResponse.json();
+            return apiJson;
+    } catch (error) {
+        console.log("somethingwent wrong", error);
     }
-    // console.log(products);
-
-    useEffect(() => {
-        getproducts();
-
-    }, [setproducts])
+    
+}
+const Page = async({params}) => {
+    const products = await getproducts(params.id);
+    console.log();
+    // return;
     return (
 
         <section className="text-gray-600 body-font">
 
-            <div className="container px-5 py-24 mx-auto grid grid-cols-4" >
+            <div className="container px-5 mx-auto grid grid-cols-1 md:grid-cols-4" >
 
-                {products.map((e, id) => {
+                {products.articles.map((e, id) => {
 
                     const { author, title, description, url, urlToImage, publishedAt } = e;
                     // console.log(urlToImage);
